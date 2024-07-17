@@ -1,6 +1,3 @@
-| Latest Version | PowerShell Gallery | Issues | License | Discord |
-|-----------------|----------------|----------------|----------------|----------------|
-| [![Latest Version](https://img.shields.io/github/v/tag/mod-posh/SpnLibrary)](https://github.com/mod-posh/SpnLibrary/tags) | [![Powershell Gallery](https://img.shields.io/powershellgallery/dt/SpnLibrary)](https://www.powershellgallery.com/packages/SpnLibrary) | [![GitHub issues](https://img.shields.io/github/issues/mod-posh/SpnLibrary)](https://github.com/mod-posh/SpnLibrary/issues) | [![GitHub license](https://img.shields.io/github/license/mod-posh/SpnLibrary)](https://github.com/mod-posh/SpnLibrary/blob/master/LICENSE) | [![Discord Server](https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5493894cf60b300587_full_logo_white_RGB.svg)]() |
 # SetSpnLibrary PowerShell Module
 
 ## Overview
@@ -39,46 +36,3 @@ The module provides functions to handle various SPN-related tasks, including:
 - **Maintenance**: Regular checks for duplicate or misconfigured SPNs can be performed using the module to maintain a healthy AD environment.
 
 The SetSpnLibrary PowerShell module is an essential tool for Active Directory administrators, providing robust and efficient SPN management capabilities.
-# SpnLibrary Module
-
-## Description
-
-A simple PowerShell Module to work with SPNs in a Windows Domain.
-
-## SpnLibrary Cmdlets
-
-### [Add-Spn](Docs/Add-Spn.md)
-
-To add an SPN, use the setspn -s service/name hostname command at a command
-prompt, where service/name is the SPN that you want to add and hostname is the
-actual host name of the computer object that you want to update.
-
-### [Find-DuplicateSpn](Docs/Find-DuplicateSpn.md)
-
-To find a list of duplicate SPNs that have been registered with Active Directory
-from a command prompt, use the setspn -X -P command, where hostname is the
-actual host name of the computer object that you want to query.
-
-### [Find-Spn](Docs/Find-Spn.md)
-
-To find a list of the SPNs that a computer has registered with Active Directory
-from a command prompt, use the setspn -Q hostname command, where hostname is
-the actual host name of the computer object that you want to query.
-
-### [Get-Spn](Docs/Get-Spn.md)
-
-To view a list of the SPNs that a computer has registered with Active Directory
-from a command prompt, use the setspn -l hostname command, where hostname is the
-actual host name of the computer object that you want to query.
-
-### [Remove-Spn](Docs/Remove-Spn.md)
-
-To remove an SPN, use the setspn -d service/namehostname command at a command
-prompt, where service/name is the SPN that is to be removed and hostname is the
-actual host name of the computer object that you want to update.
-
-### [Reset-Spn](Docs/Reset-Spn.md)
-
-If the SPNs that you see for your server display what seems to be incorrect
-names; consider resetting the computer to use the default SPNs.
-
