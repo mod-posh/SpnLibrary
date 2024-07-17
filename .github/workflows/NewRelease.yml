@@ -1,0 +1,34 @@
+name: Milestone Closure Trigger
+
+on:
+  milestone:
+    types: [closed]
+
+jobs:
+  create-release-notes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Get Project Version
+        id: get_version
+        uses: mod-posh/GetProjectVersion@v0.0.1.7
+        with:
+          Filename: 'SpnLibrary\SpnLibrary.psd1'
+          verbose: "verbose"
+
+      - name: Create Release Notes
+        uses: mod-posh/Issue2ReleaseNotes@v0.0.3.0
+        with:
+          milestone_number: ${{ github.event.milestone.number }}
+          verbose: 'verbose'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Release
+        uses: mod-posh/NewTaggedRelease@v0.0.2.14
+        with:
+          name: 'Release v${{ steps.get_version.outputs.Version }}'
+          version: ${{ steps.get_version.outputs.Version }}
+          verbose: 'verbose'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
