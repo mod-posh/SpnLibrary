@@ -42,10 +42,9 @@ jobs:
           Debug: 'true'
 
       - name: Publish PowerShell Module
-        uses: mod-posh/PublishPowerShellModule@main
+        uses: mod-posh/PublishPowerShellModule@v0.0.1.0
         with:
           ModuleName: 'SpnLibrary'
           Source: 'Repo'
-          filename: 'RELEASE.md'
           ApiKey: ${{ secrets.APIKEY }}
           Debug: 'true'
