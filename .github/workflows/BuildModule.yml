@@ -16,21 +16,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
-          path: MySuperModule  # Custom path for the checkout
+          path: 'SpnLibrary'
 
       - name: Create PowerShell Manifest
-        uses: your-username/your-repo@v1  # Replace with your repository details for the createpowershellmanifest action
+        uses: mod-posh/CreatePowerShellManifest  # Replace with your repository details for the createpowershellmanifest action
         with:
-          ModuleName: 'your-module'
-          Source: 'MySuperModule'  # Use the custom path here
+          ModuleName: 'SpnLibrary'
+          Source: 'SpnLibrary'  # Use the custom path here
+          Imports: 'public'
           Debug: 'true'
 
       - name: Create PowerShell Module
-        uses: your-username/your-repo@v1  # Replace with your repository details for the createpowershellmodule action
+        uses: mod-posh/CreatePowerShellModule  # Replace with your repository details for the createpowershellmodule action
         with:
-          ModuleName: 'your-module'
-          Source: 'MySuperModule'  # Use the custom path here
-          Imports: 'folder1,folder2'
+          ModuleName: 'SpnLibrary'
+          Source: 'SpnLibrary'  # Use the custom path here
+          Imports: 'public'
           Debug: 'true'
 
       - name: Upload PowerShell Module
