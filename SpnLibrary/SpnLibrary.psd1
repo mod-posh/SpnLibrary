@@ -30,10 +30,10 @@ CompanyName = 'Mod-Posh'
 Copyright = '(c) Jeff Patton. All rights reserved.'
 
 # Description of the functionality provided by this module
-# Description = ''
+Description = 'The SetSpnLibrary PowerShell module is designed to facilitate the management of Service Principal Names (SPNs) within an Active Directory (AD) environment'
 
 # Minimum version of the PowerShell engine required by this module
-# PowerShellVersion = ''
+PowerShellVersion = '7.4.3'
 
 # Name of the PowerShell host required by this module
 # PowerShellHostName = ''
