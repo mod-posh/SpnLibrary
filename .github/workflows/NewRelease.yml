@@ -5,7 +5,7 @@ on:
     types: [closed]
 
 jobs:
-  create-release-notes:
+  create-release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -19,16 +19,17 @@ jobs:
           verbose: "verbose"
 
       - name: Create Release Notes
-        uses: mod-posh/Issue2ReleaseNotes@v0.0.3.1
+        uses: mod-posh/Issue2ReleaseNotes@v0.0.3.2
         with:
           milestone_number: ${{ github.event.milestone.number }}
           verbose: 'verbose'
           github_token: ${{ secrets.PAT }}
 
       - name: Create Release
-        uses: mod-posh/NewTaggedRelease@v0.0.2.14
+        uses: mod-posh/NewTaggedRelease@v0.0.2.15
         with:
           name: 'Release v${{ env.VERSION }}'
+          body: ${{ env.BODY }}
           version: ${{ env.VERSION }}
           verbose: 'verbose'
           github_token: ${{ secrets.PAT }}
