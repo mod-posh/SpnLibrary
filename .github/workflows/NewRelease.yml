@@ -13,7 +13,7 @@ jobs:
 
       - name: Get Project Version
         id: get_version
-        uses: mod-posh/GetProjectVersion@v0.0.2.0
+        uses: mod-posh/GetProjectVersion@v0.0.2.1
         with:
           Filename: 'SpnLibrary\SpnLibrary.psd1'
           verbose: "verbose"
