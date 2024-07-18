@@ -9,7 +9,11 @@
 *.user
 *.userosscache
 *.sln.docstates
-
+[Oo]utput/
+discord.json
+github.json
+nuget.config
+bluesky.json
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
