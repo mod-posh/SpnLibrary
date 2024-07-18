@@ -35,14 +35,16 @@ jobs:
           Debug: 'true'
 
       - name: Test PowerShell Module
-        uses: mod-posh/TestpowerShellModule@main
+        uses: mod-posh/TestPowerShellModule@v0.0.1.0
         with:
           ModuleName: 'SpnLibrary'
           Source: 'Repo'
           Debug: 'true'
 
-      - name: Upload PowerShell Module
-        uses: actions/upload-artifact@v4
+      - name: Publish PowerShell Module
+        uses: mod-posh/PublishPowerShellModule@main
         with:
-          name: your-module-output
-          path: ${{ github.workspace }}/output
+          ModuleName: 'SpnLibrary'
+          Source: 'Repo'
+          filename: 'RELEASE.md'
+          Debug: 'true'
