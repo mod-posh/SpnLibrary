@@ -47,4 +47,5 @@ jobs:
           ModuleName: 'SpnLibrary'
           Source: 'Repo'
           filename: 'RELEASE.md'
+          ApiKey: ${{ secrets.APIKEY }}
           Debug: 'true'
