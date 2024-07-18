@@ -19,7 +19,7 @@ jobs:
           path: 'SpnLibrary'
 
       - name: Create PowerShell Manifest
-        uses: mod-posh/CreatePowerShellManifest  # Replace with your repository details for the createpowershellmanifest action
+        uses: mod-posh/CreatePowerShellManifest@main  # Replace with your repository details for the createpowershellmanifest action
         with:
           ModuleName: 'SpnLibrary'
           Source: 'SpnLibrary'  # Use the custom path here
@@ -27,7 +27,7 @@ jobs:
           Debug: 'true'
 
       - name: Create PowerShell Module
-        uses: mod-posh/CreatePowerShellModule  # Replace with your repository details for the createpowershellmodule action
+        uses: mod-posh/CreatePowerShellModule@main  # Replace with your repository details for the createpowershellmodule action
         with:
           ModuleName: 'SpnLibrary'
           Source: 'SpnLibrary'  # Use the custom path here
