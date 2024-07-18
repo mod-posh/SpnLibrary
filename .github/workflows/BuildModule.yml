@@ -15,12 +15,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          path: 'SpnLibraryRepo'
 
       - name: Create PowerShell Manifest
         uses: mod-posh/CreatePowerShellManifest@main  # Replace with your repository details for the createpowershellmanifest action
         with:
           ModuleName: 'SpnLibrary'
-          Source: ''  # Use the custom path here
+          Source: 'SpnLibraryRepo'  # Use the custom path here
           Imports: 'public'
           Debug: 'true'
 
@@ -28,7 +30,7 @@ jobs:
         uses: mod-posh/CreatePowerShellModule@main  # Replace with your repository details for the createpowershellmodule action
         with:
           ModuleName: 'SpnLibrary'
-          Source: ''  # Use the custom path here
+          Source: 'SpnLibraryRepo'  # Use the custom path here
           Imports: 'public'
           Debug: 'true'
 
