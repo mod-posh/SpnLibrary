@@ -33,7 +33,6 @@ command prompt, type setspn -l S2003A, and then press ENTER.
 
 ```powershell
 Get-Spn -AccountName cm12-test
-```
 
 Service           Name                  Hostname   SPN
 -------           ----                  --------   ---
@@ -47,9 +46,7 @@ RestrictedKrbHost SERVER-01             SERVER-01$ RestrictedKrbHost/SERVER-01
 HOST              SERVER-01             SERVER-01$ HOST/SERVER-01
 RestrictedKrbHost SERVER-01.company.com SERVER-01$ RestrictedKrbHost/SERVER-01.company.com
 HOST              SERVER-01.company.com SERVER-01$ HOST/SERVER-01.company.com
-
-Description
----
+```
 
 This example lists the SPN(s) of the given account
 
@@ -57,14 +54,11 @@ This example lists the SPN(s) of the given account
 
 ```powershell
 Get-Spn -AccountName Administrator -UserAccount
-```
 
 Service  Name                       Hostname      SPN
 -------  ----                       --------      ---
 MSSQLSvc SERVER-01.company.com:1433 Administrator MSSQLSvc/SERVER-01.company.com:1433
-
-Description
----
+```
 
 This example shows using the -UserAccount switch
 

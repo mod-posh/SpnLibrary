@@ -31,11 +31,9 @@ computer object that you want to query.
 ```powershell
 Find-DuplicateSpn
 Checking domain DC=company,DC=com
-```
 
 found 0 group of duplicate SPNs.
-
-#### Description
+```
 
 This example searches for duplicate SPNs in the current domain
 
@@ -45,11 +43,9 @@ This example searches for duplicate SPNs in the current domain
 Find-DuplicateSpn -ForestWide
 Checking forest DC=company,DC=com
 Operation will be performed forestwide, it might take a while.
-```
 
 found 0 group of duplicate SPNs.
-
-#### Description
+```
 
 This example searches for duplicate SPNs across the entire forest
 

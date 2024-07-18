@@ -34,7 +34,6 @@ command prompt, type setspn -Q WS2003A, and then press ENTER.
 
 ```powershell
 Find-Spn -Service goo
-```
 
 Service           Name                  Hostname   SPN
 -------           ----                  --------   ---
@@ -49,9 +48,7 @@ TERMSRV           server-01.company.com server-01$ TERMSRV/server-01.company.com
 TERMSRV           server-01             server-01$ TERMSRV/server-01
 CmRcService       server-01             server-01$ CmRcService/server-01
 CmRcService       server-01.company.com server-01$ CmRcService/server-01.company.com
-
-Description
----
+```
 
 Find all occurrences of the given service
 
@@ -59,7 +56,6 @@ Find all occurrences of the given service
 
 ```powershell
 Find-Spn -Name server-01
-```
 
 Service           Name                  Hostname   SPN
 -------           ----                  --------   ---
@@ -74,9 +70,7 @@ TERMSRV           server-01.company.com server-01$ TERMSRV/server-01.company.com
 TERMSRV           server-01             server-01$ TERMSRV/server-01
 CmRcService       server-01             server-01$ CmRcService/server-01
 CmRcService       server-01.company.com server-01$ CmRcService/server-01.company.com
-
-Description
----
+```
 
 Find all occurrences of the given name
 

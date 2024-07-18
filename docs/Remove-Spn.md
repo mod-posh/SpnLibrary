@@ -35,7 +35,6 @@ setspn -d http/server3.contoso.com server3, and then pressing ENTER.
 
 ```powershell
 Remove-Spn -Service foo -Name server-01
-```
 
 Service           Name                  Hostname  SPN
 -------           ----                  --------  ---
@@ -49,9 +48,7 @@ TERMSRV           server-01             server-01 TERMSRV/server-01
 CmRcService       server-01             server-01 CmRcService/server-01
 CmRcService       server-01.company.com server-01 CmRcService/server-01.company.com
 HOST              server-01             server-01 HOST/server-01
-
-Description
----
+```
 
 This example shows how to remove an SPN from an account.
 

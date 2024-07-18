@@ -37,7 +37,6 @@ to add the SPN.
 
 ```powershell
 Add-Spn -Service foo -Name server-01
-```
 
 Service           Name                  Hostname  SPN
 -------           ----                  --------  ---
@@ -52,9 +51,7 @@ WSMAN             server-01.company.com server-01 WSMAN/server-01.company.com
 RestrictedKrbHost server-01             server-01 RestrictedKrbHost/server-01
 RestrictedKrbHost server-01.company.com server-01 RestrictedKrbHost/server-01.company.com
 HOST              server-01.company.com server-01 HOST/server-01.company.com
-
-Description
----
+```
 
 This example shows how to add an spn to an account
 
@@ -62,7 +59,6 @@ This example shows how to add an spn to an account
 
 ```powershell
 Add-Spn -Service bar -Name server-01 -NoDupes
-```
 
 Service           Name                  Hostname  SPN
 -------           ----                  --------  ---
@@ -78,9 +74,7 @@ CmRcService       server-01             server-01 CmRcService/server-01
 CmRcService       server-01.company.com server-01 CmRcService/server-01.company.com
 HOST              server-01             server-01 HOST/server-01
 foo               server-01             server-01 foo/server-01
-
-Description
----
+```
 
 This example shows how to add an spn to an account while making sure it's
 unique within the domain.

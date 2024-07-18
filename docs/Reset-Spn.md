@@ -40,7 +40,6 @@ correctly, type setspn -l server2, and then press ENTER.
 
 ```powershell
 Reset-Spn -AccountName server-01
-```
 
 Service           Name                  Hostname  SPN
 -------           ----                  --------  ---
@@ -54,14 +53,11 @@ TERMSRV           server-01.company.com server-01 TERMSRV/server-01.company.com
 TERMSRV           server-01             server-01 TERMSRV/server-01
 CmRcService       server-01             server-01 CmRcService/server-01
 CmRcService       server-01.company.com server-01 CmRcService/server-01.company.com
+```
 
-Description
----
-
-This example shows how to reset the spn of a given account.
-This would
-be used if you were experiencing issues with service account logins.
-See the Link section for relevant URL's.
+This example shows how to reset the spn of a given account. This would be used
+if you were experiencing issues with service account logins. See the Link
+section for relevant URL's.
 
 ## PARAMETERS
 
