@@ -23,7 +23,7 @@ jobs:
         with:
           milestone_number: ${{ github.event.milestone.number }}
           verbose: 'verbose'
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.PAT }}
 
       - name: Create Release
         uses: mod-posh/NewTaggedRelease@v0.0.2.14
@@ -31,4 +31,4 @@ jobs:
           name: 'Release v${{ steps.get_version.outputs.Version }}'
           version: ${{ steps.get_version.outputs.Version }}
           verbose: 'verbose'
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.PAT }}
