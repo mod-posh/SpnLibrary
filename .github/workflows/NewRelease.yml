@@ -13,7 +13,7 @@ jobs:
 
       - name: Get Project Version
         id: get_version
-        uses: mod-posh/GetProjectVersion@v0.0.2.1
+        uses: mod-posh/GetProjectVersion@v0.0.2.2
         with:
           Filename: 'SpnLibrary\SpnLibrary.psd1'
           verbose: "verbose"
@@ -28,7 +28,7 @@ jobs:
       - name: Create Release
         uses: mod-posh/NewTaggedRelease@v0.0.2.14
         with:
-          name: 'Release v${{ steps.get_version.outputs.Version }}'
-          version: ${{ steps.get_version.outputs.Version }}
+          name: 'Release v${{ env.VERSION }}'
+          version: ${{ env.VERSION }}
           verbose: 'verbose'
           github_token: ${{ secrets.PAT }}
