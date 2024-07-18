@@ -24,7 +24,7 @@ jobs:
           ModuleName: 'SpnLibrary'
           Source: 'Repo'
           Imports: 'public'
-          Debug: 'true'
+          Debug: 'false'
 
       - name: Create PowerShell Module
         uses: mod-posh/CreatePowerShellModule@v0.0.1.0
@@ -32,14 +32,14 @@ jobs:
           ModuleName: 'SpnLibrary'
           Source: 'Repo'
           Imports: 'public'
-          Debug: 'true'
+          Debug: 'false'
 
       - name: Test PowerShell Module
         uses: mod-posh/TestPowerShellModule@v0.0.1.0
         with:
           ModuleName: 'SpnLibrary'
           Source: 'Repo'
-          Debug: 'true'
+          Debug: 'false'
 
       - name: Publish PowerShell Module
         uses: mod-posh/PublishPowerShellModule@v0.0.1.0
@@ -47,4 +47,4 @@ jobs:
           ModuleName: 'SpnLibrary'
           Source: 'Repo'
           ApiKey: ${{ secrets.APIKEY }}
-          Debug: 'true'
+          Debug: 'false'
