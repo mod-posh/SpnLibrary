@@ -19,19 +19,26 @@ jobs:
           path: 'Repo'
 
       - name: Create PowerShell Manifest
-        uses: mod-posh/CreatePowerShellManifest@main  # Replace with your repository details for the createpowershellmanifest action
+        uses: mod-posh/CreatePowerShellManifest@v0.0.1.0
         with:
           ModuleName: 'SpnLibrary'
-          Source: 'Repo'  # Use the custom path here
+          Source: 'Repo'
           Imports: 'public'
           Debug: 'true'
 
       - name: Create PowerShell Module
-        uses: mod-posh/CreatePowerShellModule@main  # Replace with your repository details for the createpowershellmodule action
+        uses: mod-posh/CreatePowerShellModule@v0.0.1.0
         with:
           ModuleName: 'SpnLibrary'
-          Source: 'Repo'  # Use the custom path here
+          Source: 'Repo'
           Imports: 'public'
+          Debug: 'true'
+
+      - name: Test PowerShell Module
+        uses: mod-posh/TestpowerShellModule@main
+        with:
+          ModuleName: 'SpnLibrary'
+          Source: 'Repo'
           Debug: 'true'
 
       - name: Upload PowerShell Module
